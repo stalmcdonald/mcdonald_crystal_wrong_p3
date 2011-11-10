@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile Docs - Gallery of Form Controls</title>
+	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="css/form.css" type="text/css"/>
+	<link rel="stylesheet" href="../_assets/css/jqm-docs.css"/>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+	<script src="../../experiments/themeswitcher/jquery.mobile.themeswitcher.js"></script>
+	<script src="../_assets/js/jqm-docs.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+
+<body>
+
+	<div data-role="page" class="type-interior">
+
+		<div data-role="header" data-theme="f">
+
+			<h1>Forms</h1>
+			<a href="#home" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+		</div><!-- /header -->
+
+		 <div data-role="content">
+		
+			<div class="content-primary">
+	
+				<form action="#" method="post" id="foodform">
+	
+				<h2>Menu Planner</h2>
+			
+				<p>
+					Are you hosting an intimate and elegant dinner for a few close friends or a large group of women?
+					We've created a fun menu-planning tool.  This will help you decide on what type of gathering you're hosting, how many guests you're inviting, and what type of food you want to serve.
+				</p>
+				<p1> 
+					* Required Fields
+				</p1>
+				
+			<!-- Event Name text area -->
+			<div data-role="fieldcontain">
+
+		         <label for="search">Search Input:</label>
+		         <input  type="search" name="password" id="search" value=""/>
+		         <p1>Search Page</p1>
+			</div>
+	
+			<div data-role="fieldcontain">
+		         <label for="name">* Name of Event:</label>
+		         <input placeholder="Add Event Name Here…" type="text" name="name" id="name" value="" class="required"  />
+		        	 <p2> </p2>
+			</div>
+			
+			<!-- Slider -->
+			<div data-role="fieldcontain">
+				<label for="slider">Number of Guests:</label>
+			 	<input type="range" name="slider" id="slider" value="0" min="2" max="100"  />
+			</div>
+			
+			<!-- popup menu -->
+			<div data-role="fieldcontain">
+				<label for="select" class="select">Guest seating method:</label>
+				<select name="select" id="select" data-native-menu="false">
+					
+					<option value="standard">By Table Number</option>
+					<option value="rush">By Card Name Placement</option>
+					<option value="express">Guest Choice </option>
+				</select>
+			</div>
+
+			<!-- Drop Down menu -->
+			<!-- Food Style origin -->
+			<div data-role="fieldcontain">
+				<label for="select-choice-1" class="select">Choose Food Style:</label>
+				<select name="select-choice-1" id="select-choice-1">
+					<option data-placeholder="true"></option>
+					<option value="american">American Cuisine</option>
+					<option value="italian">Italian Cuisine</option>
+					<option value="french">French Cuisine</option>
+					<option value="japanese">Japanese Cuisine</option>
+					<option value="indian">Indian Cuisine</option>
+					<option value="indian">Other</option>
+				</select>
+			</div>
+			
+			<!-- Check Box -->
+			<!-- Menu options -->
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<legend>* What will you be serving?:</legend>
+					<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="required"/>
+					<label for="checkbox-1a">Drinks</label>
+	
+					<input type="checkbox" name="checkbox-2a" id="checkbox-2a"  />
+					<label for="checkbox-2a">Appetizers</label>
+	
+					<input type="checkbox" name="checkbox-3a" id="checkbox-3a" />
+					<label for="checkbox-3a">Lunch/Dinner</label>
+	
+					<input type="checkbox" name="checkbox-4a" id="checkbox-4a"  />
+					<label for="checkbox-4a">Deserts</label>
+			    </fieldset>
+			</div>
+
+			
+			<!-- Radio Options -->
+			<div data-role="fieldcontain">
+			    <fieldset data-role="controlgroup">
+			    	<legend>Food Service:</legend>
+
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1"  />
+			         	<label for="radio-choice-1">Catering</label>
+
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+			         	<label for="radio-choice-2">Buffet</label>
+
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3" checked="checked" />
+			         	<label for="radio-choice-3">Potluck</label>
+
+			         	<input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4"  />
+			         	<label for="radio-choice-4">Undecided</label>
+			    </fieldset>
+			</div>
+			
+			<!-- Notes text field -->
+			<div data-role="fieldcontain">
+				<label for="textarea">Notes:</label>
+				<textarea placeholder="Add notes here…" cols="40" rows="8" name="textarea" id="textarea"></textarea>
+			</div>
+		
+		<!-- submit/cancel buttons -->
+		<div class="ui-body ui-body-b">
+			<fieldset class="ui-grid-a">
+					<div class="ui-block-b"><button type="submit" data-theme="a">Submit</button></div>
+					<div class="ui-block-a"><button type="reset" data-theme="d">Cancel</button></div>
+					
+		    </fieldset>
+		</div>
+		
+		
+		<a href="#foodformerrors" id="fferrorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
+	
+	</form>
+	
+	<div data-role="footer" class="footer-docs" data-theme="c">
+			<p>&copy; 2011 I Love Tea Party App</p>
+	</div>
+	</div>	
+</div><!-- /page -->
+
+		<!--modal popup-->
+		<div data-role="dialog" id="foodformerrors">
+			<div data-role="header" data-position="fixed">
+				<h1>Missing requirements.</h1>
+			</div>
+			
+			<div data-role="content">
+				<ul>
+					<li>Test.</li> 
+				</ul>
+			
+			</div>
+		</div>
+		
+		</div>
+			
+
+
+
+		<!-- JavaScript -->
+	
+		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/foodform.js"></script>
+
+</body>
+</html>

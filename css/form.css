@@ -1,0 +1,42 @@
+/* css for food form only*/
+
+
+label.error{
+	display: block; margin: 10 px 0; color: #cc0000;
+	font-size: 14px; 
+}
+
+fferrorslink{
+	display: none;
+}
+
+p1{
+	color: red;
+
+}
+
+p2{
+	padding: 20px 0;
+	color:gray;
+}
+
+/* tag for main li*/
+.ui-content{
+	color: black;
+}
+
+p{
+	font-size: 14px;
+}
+
+.ui-btn-inner{
+	text-align: center;
+}
+
+.ui-btn-text{
+	font-size: 16px;
+}
+
+span.ui-btn-text{
+
+}
